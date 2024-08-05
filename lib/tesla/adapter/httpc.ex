@@ -38,8 +38,8 @@ defmodule Tesla.Adapter.Httpc do
           customize_hostname_check: [
             match_fun: :public_key.pkix_verify_hostname_match_fun(:https)
           ],
-          crl_check: true,
-          crl_cache: {:ssl_crl_cache, {:internal, [http: 1000]}}
+          crl_check: false
+          # crl_cache: {:ssl_crl_cache, {:internal, [http: 1000]}}
         ]
       ]
 
